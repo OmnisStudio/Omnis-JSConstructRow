@@ -1,0 +1,30 @@
+Switch low(pColumn)
+	Case 'omnislibrary'
+		Calculate lDesc as '<OmnisLibrayName>'
+	Case 'omnisclass'
+		Calculate lDesc as '<RemoteFormName>'
+	Case 'appname'
+		Calculate lDesc as 'The navigator.appName of the client, i.e. the browser application name, such as “Microsoft Internet Explorer” or “Netscape”'
+	Case 'useragent'
+		Calculate lDesc as 'The navigator.userAgent of the client, which usually contains the browser type and version'
+	Case 'flags'
+		Calculate lDesc as 'Currently indicates if the client supports animation: 1 means the browser does support animation, zero means that it does not'
+	Case 'omnisplatform'
+		Calculate lDesc as 'JSU, the JavaScript Client'
+	Case 'jsscreenwidth'
+		Calculate lDesc as 'The screen width of the client, e.g. 1280 for desktop PC'
+	Case 'jsscreenheight'
+		Calculate lDesc as 'The screen height of the client, e.g. 1024 for desktop PC'
+	Case 'jsscreensize'
+		Calculate lDesc as 'The initial setting of $screensize for the client, e.g. kSSZDesktop'
+	Case 'jstimezoneoffset'
+		Calculate lDesc as 'offset from UTC in seconds, e.g. “120” for clients on UTC+2'
+	Case 'clientlocale'
+		Calculate lDesc as 'the Locale language setting of the client, e,g. “en_GB” for clients in the UK'
+	Default
+		If mid(low(pColumn),1,5)='param'
+			Calculate lDesc as 'Up to 9 pre-defined custom parameters called param1, param2 etc, which you can add to the JavaScript Client object in your HTML page; you can add custom parameters prefixed with "data-" to send further values to the form of task construct method'
+		End If
+End Switch
+
+Quit method lDesc

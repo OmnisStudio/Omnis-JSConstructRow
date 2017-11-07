@@ -1,0 +1,12 @@
+;  Enter your initialization code here
+If $cwind().$name<>$cclass().$name     ;; form is in a subwindow
+	Do $cwind.$getConstructRow Returns pRow
+End If
+
+Do pRow.$cols.$makelist($ref.$name(),pRow.[$ref.$name],'') Returns iList
+Do iList.$redefine(iColumn,iValue,iDesc)
+
+For iList.$line from 1 to iList.$linecount step 1
+	Calculate iList.iDesc as $cinst.$getdesc(iList.iColumn)
+End For
+Do iList.$line.$assign(1)
