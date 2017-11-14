@@ -1,5 +1,5 @@
 # Omnis-JSConstructRow
-Library shows the contents of the row parameter you can pass to the $construct method of a JavaScript form instance. The app can be viewed here http://tinyurl.com/jsgallery8, click on ‘Construct Row’ in the list.
+Library shows the contents of the row parameter you can pass to the $construct method of a JavaScript form instance. The app can be viewed here http://tinyurl.com/jsgallery8, click on ‘Construct Row’ in the list. For more information about the library, see the tech note: http://www.omnis.net/technotes/tnjs0004.jsp
 
 Requires Omnis Studio 8.1.2 or above.
 
